@@ -26,10 +26,10 @@
                 <router-link to="/login" class="button is-light">Log In</router-link>
               </template>
               
-              <router-link to="/cart" class="button is-success">
+              <!-- <router-link to="/cart" class="button is-success">
                 <span class="icon"><i class="fas fa-shopping-cart"></i></span>
                 <span>Cart ({{cartTotalLength}})</span>
-              </router-link>
+              </router-link>-->
             </div>
           </div>
         </div>
