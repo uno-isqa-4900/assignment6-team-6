@@ -2,12 +2,19 @@
   <div class="home">
       <div class="hero-body has-text-centered">
         <p class="title mb-6">
-          Welcome to the Bookstore
+          Welcome to the Virtual Library
         </p>
       </div>
 
       <div class="columns is-multiline">
       <div class="column is-12">
+      </div>
+      <div class="column is-3">
+        <div class="box">
+          <h3 class="is-size-4">Latest Books</h3>
+          <p class="card-text">Browse most recent books</p>
+          <p><a><router-link to="/latest-books">View Details &raquo;</router-link></a></p>
+        </div>
       </div>
       <div class="column is-3">
         <div class="box">
@@ -33,39 +40,7 @@
 
       </div>
   </div>
-      
-<!-- 
-    <div class="columns is-multiline">
-      <div class="column is-12">
-        <h2 class="is-size-2 has-text-centered">Latest Books</h2>
-      </div>
-    
-      <div
-        class="column is-3"
-        v-for="book in latestBooks"
-        v-bind:key="book.id"
-      >
-        <div class="box">
-          <figure class="image mb-4">
-            <img :src="book.get_image">
-          </figure>
-          <h3 class="is-size-4">{{book.title}}</h3>
-          <p class="is-size-6 has-text-grey">${{book.price}}</p>
 
-          <router-link v-bind:to="book.get_absolute_url" class="primary-button">View Details</router-link>
-        </div>
-      </div> 
-    </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">My Lists</h5>
-                        <p class="card-text">Track your progress here</p>
-                        <p><a class="btn btn-primary" href="{% url 'mylists' %}"
-                              role="button">View details &raquo;</a></p>
-                    </div>
-                </div>
-            </div>-->
 </template>
 
 <script>

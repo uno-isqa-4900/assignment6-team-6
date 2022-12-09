@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-et!(_g%#ekr!b9y%fmq7@5h$x4nvbyy7e8e1&!u&9sqo(s-u55
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-STRIPE_SECRET_KEY = 'sk_test_51HIHiuKBJV2qeWbD4IBpAODack7r7r9LJ0Y65zSFx7jUUwgy2nfKEgQGvorv1p2xp7tgMsJ5N9EW7K1lBdPnFnyK00kdrS27cj'
+
 
 # Application definition
 
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "https://6383d9d2603c3c36ba2c019c--resonant-pithivier-01cc4b.netlify.app/"
+    "https://6383d9d2603c3c36ba2c019c--resonant-pithivier-01cc4b.netlify.app"
     ]
 
 CORS_ORIGIN_ALLOW_ALL = True

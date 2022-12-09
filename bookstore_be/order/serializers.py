@@ -27,7 +27,7 @@ class MyOrderSerializer(serializers.ModelSerializer):
             "state",
             "city",
             "phone",
-            "stripe_token",
+ #           "stripe_token",
             "items",
             "paid_amount"
         )
@@ -56,7 +56,7 @@ class OrderSerializer(serializers.ModelSerializer):
             "state",
             "city",
             "phone",
-            "stripe_token",
+#            "stripe_token",
             "items",
         )  
     def create(self, validated_data):

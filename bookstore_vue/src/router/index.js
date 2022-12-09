@@ -11,6 +11,7 @@ import store from '@/store'
 import Checkout from '../views/Checkout.vue'
 import Success from '../views/Success.vue'
 import Favorites from '../views/Favorites.vue'
+import LatestBooks from '../views/LatestBooks.vue'
 
 const routes = [
   {
@@ -81,6 +82,11 @@ const routes = [
     path: '/favorites',
     name: 'Favorites',
     component: Favorites
+  },
+  {
+    path: '/latest-books',
+    name: 'Latest-Books',
+    component: LatestBooks
   },
 ]
 

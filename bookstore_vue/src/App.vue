@@ -1,8 +1,8 @@
 <template>
   <div id="wrapper">
-    <nav class="navbar is-dark">
+    <nav class="navbar is-primary">
       <div class="navbar-brand">
-        <router-link to="/" class="navbar-item"><strong>Bookstore</strong></router-link>
+        <router-link to="/" class="navbar-item"><strong>Virtual Library</strong></router-link>
 
         <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
           <span aria-hidden="true"></span>
@@ -13,6 +13,7 @@
 
       <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active':showMobileMenu}">
         <div class="navbar-end">
+          <router-link to="/latest-books" class="navbar-item">Latest Books</router-link>
           <router-link to="/genre-list" class="navbar-item">All Books</router-link>
           <router-link to="/favorites" class="navbar-item">Favorites</router-link>
 
@@ -26,10 +27,9 @@
                 <router-link to="/login" class="button is-light">Log In</router-link>
               </template>
               
-              <!-- <router-link to="/cart" class="button is-success">
-                <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+              <router-link to="/cart" class="button is-danger">
                 <span>Cart ({{cartTotalLength}})</span>
-              </router-link>-->
+              </router-link>
             </div>
           </div>
         </div>

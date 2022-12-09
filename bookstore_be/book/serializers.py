@@ -17,6 +17,7 @@ class BookSerializer(serializers.ModelSerializer):
             "get_image"
         )
 
+
 class GenreSerializer(serializers.ModelSerializer):
     books = BookSerializer(many=True)
     class Meta:
@@ -27,3 +28,5 @@ class GenreSerializer(serializers.ModelSerializer):
             "get_absolute_url",
             "books",
         )
+
+

@@ -2,6 +2,9 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
+    favorite: {
+      items: [],
+    },
     cart: {
       items: [],
     },
@@ -11,6 +14,24 @@ export default createStore({
   getters: {
   },
   mutations: {
+    initializeStore(state) {
+      if(localStorage.getItem('favorite')){
+        state.cart = JSON.parse(localStorage.getItem('favorite'))
+      }
+      else {
+        localStorage.setItem('favorite', JSON.stringify(state.favorite))
+      }
+    },
+    addToFavorite(state, item){
+      const exists = state.favorite.items.filter(i => i.book.id === item.book.id)
+      if (exists.length) {
+        exists[0].quantity = parseInt(exists[0].quantity) + parseInt(item.quantity)
+      }
+      else {
+        state.favorite.items.push(item)
+      }
+      localStorage.setItem('favorite', JSON.stringify(state.favorite))
+    },
     initializeStore(state) {
       if(localStorage.getItem('cart')){
         state.cart = JSON.parse(localStorage.getItem('cart'))
@@ -43,3 +64,4 @@ export default createStore({
   modules: {
   }
 })
+
